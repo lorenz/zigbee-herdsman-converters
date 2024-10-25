@@ -1564,7 +1564,7 @@ const converters2 = {
                 {level: value.toString(), transtime: 0},
                 utils.getOptions(meta.mapped, entity),
             );
-            return {state: {fan_speed: value}, readAfterWriteTime: 0};
+            return {state: {fan_speed: value}};
         },
         convertGet: async (entity, key, meta) => {
             await entity.read('genLevelCtrl', ['currentLevel']);
